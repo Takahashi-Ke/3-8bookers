@@ -1,0 +1,16 @@
+<% flash.each do |key, value| %>
+    <p class="alert">
+      <%= value %>
+    </p>
+<% end %>
+
+<div class="show-book">
+    <p><strong>Title:</strong><%= @book.title %></p>
+</div>
+<div class="show-book">
+    <p><strong>Body:</strong><%= @book.body %></p>
+</div>
+
+<%= link_to 'Edit', edit_book_path, {class:"link"} %>
+|
+<%= link_to 'Back', books_path, {class:"link"} %>
